@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+/*-------------------------------------------
+変数管理
+-------------------------------------------*/
+:root{
+	--font-color:#333;
+	--border-color:#c3c3c3;
+	--btn-color:#4b4b4b;
+	--table-bg:#ECEBEB;
+}
+
+/*-------------------------------------------
+共通部分
+-------------------------------------------*/
+html{
+    font-size: 100%;    
+}
+
+body{
+	color: var(--font-color);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 0.75rem; /* 12px */
+}
+
+img{
+	width: 100%;
+    vertical-align: bottom;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Layout */
+.wrap{
+	padding: 1rem;
+}
+
+.header,
+.main{
+	max-width: 1000px;
+	margin-inline: auto;
+}
+
+.section-text {
+	margin-top: 1.25rem;
+}
+
+.price,
+.section-order,
+.cart-btn,
+.section-size{
+	margin-top: 1.8rem;
+}
+
+select{
+	border: solid 1px var(--border-color);
+	width: 100%;
+	padding: 0 0.625rem;
+	-moz-appearance: menulist;
+	-webkit-appearance: menulist;
+}
+
+/* Button */
+.cart-btn {
+	background: var(--btn-color);
+	padding: 1rem;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+/* Heading */
+.section-title{
+}
+
+/*-------------------------------------------
+HEADER
+-------------------------------------------*/
+.logo-wrap{
+	margin-top: 1.25rem;
+}
+
+.logo {
+	width: 7rem;
+	margin-inline: auto;
+}
+
+.header-nav {
+	margin: 2rem auto 0 auto;
+	display: flex;
+	overflow-x: scroll;
+}
+
+.header-nav a{
+	display: inline-block;
+}
+
+.header-nav a:not(first-child){
+	margin-right: 0.875rem;
+}
+
+.nav-left,
+.nav-right{
+	display: flex;
+}
+
+/*-------------------------------------------
+MAIN
+-------------------------------------------*/
+.section-title {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 3.7rem;
+	border-top: solid 1px var(--border-color);
+	border-bottom: solid 1px var(--border-color);
+}
+
+.section-text {
+	line-height: 1.9;
+}
+
+/* table 共通 */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th{
+	font-weight: 400;
+}
+
+th,
+td{
+	padding: 0.625rem;
+	text-align: center;
+}
+
+/* order-table */
+.order-table .color,
+.order-table .size{
+	width: 20%;
+}
+
+.order-table .quantity{
+	width: 60%;
+}
+
+/* テーブルの縦列に線をつける */
+.order-table th:nth-child(even),
+.order-table td:nth-child(even){
+	border-right: 1px solid var(--border-color);
+	border-left: 1px solid var(--border-color);
+}
+
+/* テーブルの横列に線をつける */
+.order-table tr:nth-child(even){
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.order-table th{
+	border-bottom: 1px solid var(--border-color);
+}
+
+/* size-table */
+.section-size table,
+.section-size th,
+.section-size td{
+	border: 1px solid var(--border-color);
+}
+
+.size-table th{
+	background-color: var(--table-bg);
+}
+
+.size-table{
+	width: 100%;
+}
+
+.size-table .size{
+	width: 16%;
+}
+
+.chest,
+.weist,
+.height{
+	width: 28%;
+}
+
+.size-table th,
+.size-table td{
+	padding: 0.625rem;
+	line-height: 1.5;
+}
+
+/*-------------------------------------------
+FOOTER
+-------------------------------------------*/
+.footer {
+	margin-top: 6.875rem;
+	margin-bottom: 0.625rem;
+	font-size: 0.625rem;
+	text-align: center;
+}
+
+/*-------------------------------------------
+レスポンシブ
+-------------------------------------------*/
+
+@media (min-width: 896px) {
+    /* 896px以上に適用されるCSS（デスクトップ用） */
+
+/* 共通 */
+.inner-wrap{
+	max-width: 800px;
+}
+
+/* HEADER */
+.header{
+	border-bottom: solid 1px var(--border-color);
+}
+
+.header-nav{
+	padding-bottom: 0.625rem;
+	overflow-x: visible;
+	justify-content: space-between;
+}
+
+/* MAIN */
+.main{
+	margin-top: 3rem;
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	width: 100%;
+}
+
+.mv{
+	width: 50%;
+}
+
+.article-wrap{
+	width: 50%;
+}
+
+.main .wrap{
+	padding-top: 0;
+}
+
+}
